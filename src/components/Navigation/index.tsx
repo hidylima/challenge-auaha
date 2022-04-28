@@ -75,7 +75,46 @@ export function Navigation() {
           </li>
         </ul>
 
-        
+        <div className="navigation-hover">
+          <ul className="items-container">
+            <li className="item-wrapper"> 
+              <p className="item-wrapper" >Folhado</p>
+              <ul className="products">
+                <li className="product">
+                  <Link to="" className="link">Anel</Link>{" "}
+                </li>
+                <li>
+                </li>
+                  <Link to="" className="link" >Solitários</Link>
+                <li>
+                </li>
+                  <Link to="" className="link" >Cristal</Link>
+                <li>
+                  <Link to="" className="link" >Pérola</Link>
+                </li>
+                <li>
+                  <Link to="" className="link" >Zircônia</Link>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              Prata
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+
+            <li>
+              Ouro
+              <ul>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+
+          <img src="" alt="" className="image" />
+        </div>
       </NavigationContainer>
     </>
   );
