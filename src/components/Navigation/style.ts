@@ -15,7 +15,7 @@ export const NavigationContainer = styled.nav`
   backdrop-filter: blur(3px);
   transition: 1s all ease;
   opacity: 0;
-  z-index: 10;
+  z-index: 1000;
 
   @media (min-width: 56.25em) {
     width: 100%;
@@ -26,8 +26,8 @@ export const NavigationContainer = styled.nav`
     left: 0;
     height: auto;
     backdrop-filter: none;
-
     border-top: 1px solid #ccc;
+    z-index: 100;
   }
 
   &.--active {
@@ -57,7 +57,6 @@ export const NavigationContainer = styled.nav`
       @media (min-width: 56.25em) {
         padding: 0;
       }
-
 
       > .link {
         color: var(--color-light-black);
@@ -131,7 +130,7 @@ export const MobileContainer = styled.div`
   }
 
   .close {
-    z-index: 100;
+    z-index: 1001;
     right: 8px;
     top: 0;
     position: absolute;

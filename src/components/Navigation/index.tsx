@@ -13,11 +13,14 @@ export function Navigation() {
   return (
     <>
       <MobileContainer onClick={isMenuOpen}>
-      { !showMobileMenu ? <MdMenu className="open"/> : <MdClose className={ showMobileMenu ? "close --active": ""}/>}
+        {!showMobileMenu ? (
+          <MdMenu className="open" />
+        ) : (
+          <MdClose className={showMobileMenu ? "close --active" : ""} />
+        )}
       </MobileContainer>
 
-      
-      <NavigationContainer className={ showMobileMenu ? "--active": ""} >
+      <NavigationContainer className={showMobileMenu ? "--active" : ""}>
         <LoginContainer>
           <p className="user">Olá, Visitante! Seja Bem-vindo</p>
           <ul className="items">
@@ -65,12 +68,14 @@ export function Navigation() {
             </Link>
           </li>
 
-          <li className="item" onClick={isMenuOpen}> 
+          <li className="item" onClick={isMenuOpen}>
             <Link to="#" className="link">
               Kits
             </Link>
           </li>
         </ul>
+
+        
       </NavigationContainer>
     </>
   );

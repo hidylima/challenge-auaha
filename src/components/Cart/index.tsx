@@ -1,17 +1,24 @@
-import React from "react";
+import {useState} from "react";
 import { CartContainer } from "./style";
 import cartImg from "../../assets/cart.svg";
 import { Link } from "react-router-dom";
 import { MdOutlineAddShoppingCart, MdClose } from "react-icons/md";
 import Product01 from "../../assets/products/product01.png";
 
+
 export const Cart = () => {
+  const [activeCart, seActiveCart] = useState(false)
+
+  function isOpenCard() {
+    return seActiveCart(!activeCart);
+  }
+
   return (
     <CartContainer>
-      <img className="image" src={cartImg} alt="Carrinho" />
+      <img className="image" src={cartImg} alt="Carrinho" onClick={isOpenCard} />
       <span className="count">0</span>
 
-      <div className="cart">
+      <div  className={!activeCart ? "cart" : "cart -active"}>
         <ul className="items">
           <li className="item">
             {/* <Link to="" className="link">

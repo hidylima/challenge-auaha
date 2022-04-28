@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
   --color-light-tamarind: #F7F7F7;
   --color-green: #09B183;
   --color-kiwi: #0CE21C;
-  --color-gray: ##00000029;
-  --color-black: ##000000;
+  --color-gray: #00000029;
+  --color-black: #000000;
   --color-light-black: #222222;
 
   // size
