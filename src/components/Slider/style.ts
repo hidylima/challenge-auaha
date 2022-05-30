@@ -8,11 +8,6 @@ export const Container = styled.section`
   overflow: hidden;
   top: -10px;
 
-@media screen and (max-width: 700px){
-  
-    margin: 100px 10px 0;
-  
-}
 
 .slide {
   width: 100%;
