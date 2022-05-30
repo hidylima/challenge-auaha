@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavigationContainer, LoginContainer, MobileContainer } from "./style";
 import { MdMenu, MdClose } from "react-icons/md";
+import productImg from '../../assets/products/product01.png'
 
 export function Navigation() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -76,44 +77,69 @@ export function Navigation() {
         </ul>
 
         <div className="navigation-hover">
-          <ul className="items-container">
-            <li className="item-wrapper"> 
-              <p className="item-wrapper" >Folhado</p>
-              <ul className="products">
-                <li className="product">
-                  <Link to="" className="link">Anel</Link>{" "}
-                </li>
-                <li>
-                </li>
-                  <Link to="" className="link" >Solitários</Link>
-                <li>
-                </li>
-                  <Link to="" className="link" >Cristal</Link>
-                <li>
-                  <Link to="" className="link" >Pérola</Link>
-                </li>
-                <li>
-                  <Link to="" className="link" >Zircônia</Link>
-                </li>
-              </ul>
-            </li>
+          <nav className="items-container">
+            <div className="item-wrapper">
+              <p className="title">Folhado</p>
+              <Link to="" className="link">
+                Anel
+              </Link>{" "}
+              <Link to="" className="link">
+                Solitários
+              </Link>
+              <Link to="" className="link">
+                Cristal
+              </Link>
+              <Link to="" className="link">
+                Pérola
+              </Link>
+              <Link to="" className="link">
+                Zircônia
+              </Link>
+            </div>
 
-            <li>
-              Prata
-              <ul>
-                <li></li>
-              </ul>
-            </li>
+            <div className="item-wrapper">
+              <p className="title">Prata</p>
+              <Link to="" className="link">
+                Anel
+              </Link>{" "}
+              <Link to="" className="link">
+                Solitários
+              </Link>
+              <Link to="" className="link">
+                Cristal
+              </Link>
+              <Link to="" className="link">
+                Pérola
+              </Link>
+              <Link to="" className="link">
+                Zircônia
+              </Link>
+            </div>
 
-            <li>
-              Ouro
-              <ul>
-                <li></li>
-              </ul>
-            </li>
-          </ul>
+            <div className="item-wrapper">
+              <p className="title">Ouro</p>
+              <Link to="" className="link">
+                Anel
+              </Link>{" "}
+              <Link to="" className="link">
+                Solitários
+              </Link>
+              <Link to="" className="link">
+                Cristal
+              </Link>
+              <Link to="" className="link">
+                Pérola
+              </Link>
+              <Link to="" className="link"> 
+                Zircônia
+              </Link>
+            </div>
+            <div className="box">
+            <img src={productImg} alt="" className="image" />
+            </div>
+          </nav>
 
-          <img src="" alt="" className="image" />
+    
         </div>
       </NavigationContainer>
     </>
