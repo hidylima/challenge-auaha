@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { BtnSlider } from "./Button";
 import { PromotionContainer } from "./style";
+import produto01 from "../../assets/products/product01.png";
 
 const promotionDate = [
   {
@@ -288,13 +289,16 @@ export const Promotion = () => {
   return (
     <PromotionContainer>
       <Router>
-        <div className="item">
-          <ul>
-            <li className="promotion">
-              <Link to="" className="wrapper">
-                <span className="spy">Espiar</span>
+        <BtnSlider moveSlide={nextSlide} direction={"next"} />
+        <div className="items">
+          <div className="elements">
+  
+
+            <article className="promotion">
+              <Link to="" className="action">
                 <img
-                  src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg"
+                  className="image"
+                  src={produto01}
                   alt=""
                 />
 
@@ -304,21 +308,21 @@ export const Promotion = () => {
                 </div>
 
                 <p className="description">Anel Banhado a Ouro com Zicronia</p>
-                <div className="box">
-                  <p className="price">
-                    de R$ 299,00 <strong>Por R$ 99,00</strong>
-                    <span>6x R$ 31,00 sem juros </span>
-                  </p>
+
+                <div className="price">
+                  <p className="oldPrice">de R$ 299,00 </p> 
+                  <strong className="newPrice">Por R$ 99,00</strong>
+                  <span className="installments">6x R$ 31,00 sem juros </span>
                 </div>
               </Link>
 
-              <button className="addBag">Adicionar à sacola</button>
-            </li>
+            </article>
 
-            <li className="promotion">
-              <Link to="" className="wrapper">
+            <article className="promotion">
+              <Link to="" className="action">
                 <img
-                  src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg"
+                  className="image"
+                  src={produto01}
                   alt=""
                 />
 
@@ -326,20 +330,23 @@ export const Promotion = () => {
                   <span>Mais vendido</span>
                   <span>Frente Grátis</span>
                 </div>
+
                 <p className="description">Anel Banhado a Ouro com Zicronia</p>
-                <div className="box">
-                  <p className="price">
-                    de R$ 299,00 <strong>Por R$ 99,00</strong>
-                    <span>6x R$ 31,00 sem juros </span>
-                  </p>
+
+                <div className="price">
+                  <p className="oldPrice">de R$ 299,00 </p> 
+                  <strong className="newPrice">Por R$ 99,00</strong>
+                  <span className="installments">6x R$ 31,00 sem juros </span>
                 </div>
               </Link>
-            </li>
 
-            <li className="promotion">
-              <Link to="" className="wrapper">
+            </article>
+
+            <article className="promotion">
+              <Link to="" className="action">
                 <img
-                  src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg"
+                  className="image"
+                  src={produto01}
                   alt=""
                 />
 
@@ -347,20 +354,23 @@ export const Promotion = () => {
                   <span>Mais vendido</span>
                   <span>Frente Grátis</span>
                 </div>
+
                 <p className="description">Anel Banhado a Ouro com Zicronia</p>
-                <div className="box">
-                  <p className="price">
-                    de R$ 299,00 <strong>Por R$ 99,00</strong>
-                    <span>6x R$ 31,00 sem juros </span>
-                  </p>
+
+                <div className="price">
+                  <p className="oldPrice">de R$ 299,00 </p> 
+                  <strong className="newPrice">Por R$ 99,00</strong>
+                  <span className="installments">6x R$ 31,00 sem juros </span>
                 </div>
               </Link>
-            </li>
 
-            <li className="promotion">
-              <Link to="" className="wrapper">
+            </article>
+
+            <article className="promotion">
+              <Link to="" className="action">
                 <img
-                  src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg"
+                  className="image"
+                  src={produto01}
                   alt=""
                 />
 
@@ -368,58 +378,19 @@ export const Promotion = () => {
                   <span>Mais vendido</span>
                   <span>Frente Grátis</span>
                 </div>
+
                 <p className="description">Anel Banhado a Ouro com Zicronia</p>
-                <div className="box">
-                  <p className="price">
-                    de R$ 299,00 <strong>Por R$ 99,00</strong>
-                    <span>6x R$ 31,00 sem juros </span>
-                  </p>
+
+                <div className="price">
+                  <p className="oldPrice">de R$ 299,00 </p> 
+                  <strong className="newPrice">Por R$ 99,00</strong>
+                  <span className="installments">6x R$ 31,00 sem juros </span>
                 </div>
               </Link>
-            </li>
 
-            <li className="promotion">
-              <Link to="" className="wrapper">
-                <img
-                  src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg"
-                  alt=""
-                />
+            </article>
 
-                <div className="informative">
-                  <span>Mais vendido</span>
-                  <span>Frente Grátis</span>
-                </div>
-                <p className="description">Anel Banhado a Ouro com Zicronia</p>
-                <div className="box">
-                  <p className="price">
-                    de R$ 299,00 <strong>Por R$ 99,00</strong>
-                    <span>6x R$ 31,00 sem juros </span>
-                  </p>
-                </div>
-              </Link>
-            </li>
-
-            <li className="promotion">
-              <Link to="" className="wrapper">
-                <img
-                  src="https://imgcentauro-a.akamaihd.net/230x230/94313731.jpg"
-                  alt=""
-                />
-
-                <div className="informative">
-                  <span>Mais vendido</span>
-                  <span>Frente Grátis</span>
-                </div>
-                <p className="description">Anel Banhado a Ouro com Zicronia</p>
-                <div className="box">
-                  <p className="price">
-                    de R$ 299,00 <strong>Por R$ 99,00</strong>
-                    <span>6x R$ 31,00 sem juros </span>
-                  </p>
-                </div>
-              </Link>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <BtnSlider moveSlide={nextSlide} direction={"next"} />

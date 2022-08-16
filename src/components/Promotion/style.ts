@@ -2,46 +2,55 @@ import styled from "styled-components";
 
 export const PromotionContainer = styled.section`
   width: 100%;
-  padding: 1rem 6rem;
+  padding: 1rem 4rem;
   position: relative;
 
-   .item {
+  .items {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 37.4375em;
     overflow: hidden;
   }
 
-  ul {
-    width: 150%;
-    position: relative;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+  .elements {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
   }
 
-   li {
-    width: 200px;
-    flex: 1 1 25%;
-    margin: 0 1rem;
-    padding: 1rem;
-    display: flex ;
-    flex-direction:column ;
+  .promotion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    background-color: lemonchiffon;
+    transition: 1s;
+    opacity: 1;
+    border: 1px solid #000;
+
+    &.-active {
+      opacity: 1;
+    }
 
     .spy {
       position: absolute;
-    top: 123px;
-    z-index: 100;
-    text-align: center;
-    background: red;
-    display: inline-block;
-    width: 100px;
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 16px;
-    font-weight: 500;
-    margin: 0 auto;
+      top: 123px;
+      z-index: 100;
+      text-align: center;
+      background: red;
+      display: inline-block;
+      width: 100px;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 auto;
     }
 
-     .addBag {
+    .addBag {
       background-color: rgb(0, 0, 0);
       color: white;
       font-size: 12px;
@@ -53,24 +62,28 @@ export const PromotionContainer = styled.section`
     }
 
     &:hover .addBag {
-      display: none ;
+      display: none;
     }
-
   }
 
-  .wrapper {
+  .action {
     position: relative;
+    width: 350px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
     border-radius: 6px;
     overflow: hidden;
-    margin-bottom: 1rem;
 
-    img {
+    .image {
       display: block;
-      width: 100%;
+      width: 310px;
+      height: 310px;
+      object-fit: contain;
+      object-position: center;
 
       &::before {
         display: block;
@@ -100,7 +113,7 @@ export const PromotionContainer = styled.section`
       background-color: #000;
       margin: 5px;
       border-radius: 25px;
-      padding: 5px 10px;
+      padding: 5px 20px;
       border: none;
       color: white;
       font-size: 12px;
@@ -119,6 +132,7 @@ export const PromotionContainer = styled.section`
     color: #000;
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   .box {
@@ -135,21 +149,19 @@ export const PromotionContainer = styled.section`
     font-weight: 700;
     color: #ccc;
 
-    strong {
+    .newPrice {
       font-size: 16px;
       color: #000;
       margin: 2px 0 2px 0;
       text-decoration: none;
     }
 
-    span {
+    .installments {
       font-size: 14px;
       color: #000;
       font-weight: 400;
       text-decoration: none;
     }
-
-    
   }
 
   .btn-slide {
