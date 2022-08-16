@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const NavigationContainer = styled.nav`
+  grid-area: navigation;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
   padding: 1rem 0;
-  grid-area: navigation;
-  overflow-y: visible;
   position: fixed;
-  top: 0;
-  left: -5000px;
+  left: 0;
+  top: -5000px;
   background: var(--color-white);
   backdrop-filter: blur(3px);
-  transition: 1s all ease;
+  transition: all 0.5s ease;
   opacity: 0;
+  overflow-y: visible;
   z-index: 1000;
 
   @media (min-width: 56.25em) {
@@ -25,6 +25,7 @@ export const NavigationContainer = styled.nav`
     justify-content: center;
     opacity: 1;
     left: 0;
+    top: 0;
     height: auto;
     backdrop-filter: none;
     border-top: 1px solid #ccc;
@@ -32,9 +33,12 @@ export const NavigationContainer = styled.nav`
   }
 
   &.--active {
-    display: flex;
-    left: 0;
+    top: 0;
     opacity: 1;
+
+    @media (min-width: 56.25em) {
+
+    }
   }
 
   > .items {
@@ -170,6 +174,9 @@ export const MobileContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  
+
+  transition: all 0.5s 1s ease;
 
   @media (min-width: 56.25em) {
     display: none;
@@ -184,12 +191,10 @@ export const MobileContainer = styled.div`
 
   .close {
     z-index: 1001;
-    right: 8px;
     top: 0;
     position: absolute;
     margin-top: 1rem;
     opacity: 0;
-    transition: 1s all ease 1s;
     &.--active {
       opacity: 1;
     }
