@@ -8,7 +8,6 @@ export const HeaderContainer = styled.header`
   justify-items: center;
   padding: var(--gap-min) 4%;
   align-items: center;
-  border-bottom: 1px solid #ccc;
   margin-bottom: var(--gap-med);
   grid-template-areas:
     "mobile logo  checkUserCart"
