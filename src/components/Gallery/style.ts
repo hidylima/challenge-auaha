@@ -5,8 +5,18 @@ export const Container = styled.section`
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 37.5em) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 3fr;
+    }
+
+    @media (min-width: 56.25em) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 2fr;
+    }
   }
 
   .gallery,
@@ -22,6 +32,20 @@ export const Container = styled.section`
     margin-bottom: 1rem;
     overflow: hidden;
     cursor: pointer;
+    height: 400px;
+
+    &.-full {
+      @media (min-width: 37.5em) {
+        justify-content: center;
+        grid-column: 1 / 3;
+      }
+      @media (min-width: 56.25em) {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        align-self: stretch;
+        height: auto;
+      }
+    }
 
     figcaption {
       position: absolute;
@@ -42,8 +66,10 @@ export const Container = styled.section`
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transition: transform 400ms ease-out;
+    object-fit: contain;
+    object-position: center;
+    padding: 2.5px;
   }
 
   .gallery-image:hover {
