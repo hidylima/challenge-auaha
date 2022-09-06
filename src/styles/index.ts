@@ -72,7 +72,7 @@ html {
   }
 
   @media (max-width: 720px) {
-     font-size: 85.75%;
+     font-size: 85.75%;  
   }
 
   @media (max-width: 480) {
