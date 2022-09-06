@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding: var(--gap-double-max);
+  padding: calc(8px + 1.5625vw);
 
   .gallery {
     display: grid;
