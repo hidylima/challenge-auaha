@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PromotionContainer = styled.section`
   width: 100%;
-  padding: 1rem 4rem;
+  padding: calc(8px + 1.5625vw);
   position: relative;
 
   .items {
