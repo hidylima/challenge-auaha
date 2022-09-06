@@ -3,9 +3,12 @@ import { ImageSlider } from "../../components/Slider";
 import { Gallery } from "../../components/Gallery";
 import { Promotion } from "../../components/Promotion";
 import { Presentation } from "../../components/Presentation";
-import { HomeContainer, Box, Container, Item  } from "./style";
+import { HomeContainer, Box, Container, Item } from "./style";
 import freightImg from "../../assets/freight-icon.svg";
 import cardImg from "../../assets/card-credit.svg";
+import { Testimonial } from "../../components/Testimonial";
+import { Newslatter } from "../../components/Newslatter";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   return (
@@ -35,8 +38,12 @@ export function Home() {
         </Box>
         <Gallery />
         <Promotion />
-        <Presentation /> 
+        <Presentation />
+        <Testimonial />
+        <Newslatter />
       </Container>
+
+      <Footer />
     </HomeContainer>
   );
 }
