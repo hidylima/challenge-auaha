@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SectionContainer = styled.section`
   width: 100%;
   margin: 0 auto;
-  padding: 50px;
+  padding: calc(8px + 1.5625vw);
 `;
 
 export const PresentationContainer = styled.section`
@@ -68,7 +68,7 @@ export const PresentationWrapper = styled.article`
     align-items: center;
     justify-content: center;
     font-family: "Great Vibes", cursive;
-    font-size: 6rem;
+    font-size: clamp(1rem,1rem + 10vw,3.5em);
     color: #fff;
   }
 `;
